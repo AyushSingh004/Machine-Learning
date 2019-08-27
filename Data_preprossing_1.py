@@ -17,10 +17,10 @@ sim=SimpleImputer()
 sim.fit(X[:,1:3])
 X[:, 1:3]=sim.transform(X[:,1:3])
 X
-#Encoding categorial variable
+#Encoding categorial variable for X
 from sklearn.preprocessing import LabelEncoder
-le=LabelEncoder()
-X[:, 0]=le.fit_transform(X[: , 0])
+labelencoder_X=LabelEncoder()
+X[:, 0]=labelencoder_X.fit_transform(X[: , 0])
 X
 
 #Dumy Encoding using OneHotEncoder
@@ -28,28 +28,7 @@ from sklearn.preprocessing import OneHotEncoder
 onehotencoder=OneHotEncoder(categorical_features= [0])
 X=onehotencoder.fit_transform(X).toarray()
 
-#for y
+#fEncoding categorial variable for y
 from sklearn.preprocessing import LabelEncoder
-le1 = LabelEncoder()
-y= le1.fit_transform(y)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+labelencoder_y = LabelEncoder()
+y= lableencoder_y.fit_transform(y)
