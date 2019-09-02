@@ -31,4 +31,4 @@ X=onehotencoder.fit_transform(X).toarray()
 #fEncoding categorial variable for y
 from sklearn.preprocessing import LabelEncoder
 labelencoder_y = LabelEncoder()
-y= lableencoder_y.fit_transform(y)
+y= labelencoder_y.fit_transform(y)
