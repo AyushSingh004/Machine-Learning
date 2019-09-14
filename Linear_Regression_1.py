@@ -55,16 +55,3 @@ plt.title('SALARY vs EXPERIENCE (TRAINING SET)')
 plt.xlabel('AGE')
 plt.ylabel('SALARY')
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
