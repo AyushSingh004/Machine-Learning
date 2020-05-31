@@ -18,5 +18,9 @@ dtr.fit(X,y)
 # Predicting a new result
 dtr.predict([[4.5]])
 
-
 # Visualising the Decision Tree Regression results (higher resolution)
+X_grid = np.arange(min(X),max(X),0.1)
+X_grid=X_grid.reshape((len(X_grid)),1)
+plt.scatter(X,y,color='r')
+plt.plot(X_grid,dtr.predict(X_grid),color='b')
+plt.show()
