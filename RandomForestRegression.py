@@ -24,17 +24,3 @@ X_grid=X_grid.reshape((len(X_grid)),1)
 plt.scatter(X,y,color='r')
 plt.plot(X_grid,regressor.predict(X_grid),color='b')
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
