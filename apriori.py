@@ -18,3 +18,14 @@ rules = apriori(transactions, min_support = 0.003, min_confidence = 0.2, min_lif
 # Visualising the results
 results = list(rules)
 print(results)
+
+def inspect(results):
+    lhs = [ tuple (result[2][0][0])[0] for result in results]
+    rhs = [ tuple (result[2][0][1])[0] for result in results]
+    supports =[result[1] for result in results]
+    confidence = [result[2][0][2] for result in results]
+    lifts = [result[2][0][3] for result in results]
+    return list(zip(lhs,rhs,supports,confidence,lifts))
+resultsindataframe = pd.DataFrame(inspect(results),columns=['Left Hand Side','Right Hand Side','Support','Confidence','Lift'])
+
+resultsindataframe
